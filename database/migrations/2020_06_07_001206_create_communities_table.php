@@ -29,7 +29,7 @@ class CreateCommunitiesTable extends Migration
             $table->string('member_4')->nullable();
             $table->string('member_5')->nullable();
             $table->string('question_1');
-            $table->enum('question_2', ['YA', 'TIDAK']);
+            $table->enum('question_2', ['Ya', 'Tidak']);
             $table->enum('question_3', [
                 '1 Kali', 
                 'Kurang dari 1 kali',

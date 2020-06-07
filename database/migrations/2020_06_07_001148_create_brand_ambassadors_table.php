@@ -19,16 +19,16 @@ class CreateBrandAmbassadorsTable extends Migration
             $table->string('instagram')->unique();
             $table->string('email')->unique();
             $table->string('phone');
-            $table->enum('gender', ['LAKI-LAKI', 'PEREMPUAN']);
+            $table->enum('gender', ['Laki-Laki', 'Perempuan']);
             $table->string('address');
             $table->integer('province');
             $table->integer('city');
             $table->string('postal_code');
             $table->string('job');
             $table->string('question_1');
-            $table->enum('question_2', ['YA', 'TIDAK']);
-            $table->enum('question_3', ['YA', 'TIDAK']);
-            $table->enum('question_4', ['YA', 'TIDAK']);
+            $table->enum('question_2', ['Ya', 'Tidak']);
+            $table->enum('question_3', ['Ya', 'Tidak']);
+            $table->enum('question_4', ['Ya', 'Tidak']);
             $table->enum('question_5', [
                 'Ya saya tahu dan menggunakan produk GG SHVR', 
                 'Ya saya tahu tapi tidak menggunakan produk GG SHVR',

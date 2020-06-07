@@ -6,5 +6,13 @@ use Illuminate\Http\Request;
 
 class CommunityController extends Controller
 {
-    //
+    public function register()
+    {
+
+    }
+
+    public function save()
+    {
+        
+    }
 }
