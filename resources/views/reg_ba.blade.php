@@ -16,9 +16,15 @@
                             </div>
                         </div>
 
-                        <div class="text-center" style="font-size: 25px; font-weight: bold;"><p>SHVR COLONIES 2020 BRAND AMBASSADOR REGISTRATION FORM</p></div>
-
+                        <div class="text-center" style="font-size: 20px; font-weight: bold; margin-bottom: 20px">
+                            <span>SHVR COLONIES 2020 BRAND AMBASSADOR</span>
+                            <br>
+                            <span>REGISTRATION FORM</span>
+                        </div>
+                        
                         @include('flash::message')
+
+                        <input type="hidden" name="config" id="config" value="ba">
 
                         <div class="form-group row">
                             <label for="full_name" class="col-md-6 col-form-label text-md-left">Nama Lengkap</label>

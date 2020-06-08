@@ -1,12 +1,17 @@
 $(document).ready(function () {
-    getProvince();
-    getCity(0);
+    if($('#config').val() == "ba") {
+        getProvince();
+        getCity(0);
+        provinceChange();
+    }
+});
 
+function provinceChange() {
     $("#province").change(function () {
         var id = this.value
         getCity(id);
     });
-});
+}
 
 function getProvince() {
     var m = $("meta[name=api-base-url]");
@@ -26,7 +31,7 @@ function getProvince() {
         });
     })
     .catch(function (error) {
-        alert(error)
+        console.log(error);
     });
 }
 
@@ -49,7 +54,7 @@ function getCity(val) {
             });
         })
         .catch(function (error) {
-            alert(error)
+            console.log(error);
         });
     } else {
         axios.get(link+'/api/city/'+val)
@@ -63,7 +68,7 @@ function getCity(val) {
             });
         })
         .catch(function (error) {
-            alert(error)
+            console.log(error);
         });
     }
 }
