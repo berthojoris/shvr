@@ -71,6 +71,7 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a class="nav-link" href="{{ route('ba_get') }}">BA REG</a>
+                        <a class="nav-link" href="{{ route('baToExcel') }}">BA DATA</a>
                         <a class="nav-link" href="{{ route('comm_get') }}">BA COMM</a>
                         <a href="{{ route('login') }}">Login</a>
                         @if (Route::has('register'))

@@ -13,3 +13,5 @@ Route::get('/brand-ambassador', 'BrandAmbassadorController@register')->name('ba_
 Route::get('/community', 'CommunityController@register')->name('comm_get');
 Route::post('/save/ba', 'BrandAmbassadorController@save')->name('ba_post');
 Route::post('/save/comm', 'CommunityController@save')->name('comm_post');
+
+Route::get('/xls/ba', 'BrandAmbassadorController@toExcel')->name('baToExcel');

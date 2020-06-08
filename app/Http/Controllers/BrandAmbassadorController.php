@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\BrandAmbassador;
+use App\Exports\BAExport;
 use Illuminate\Http\Request;
 use App\Http\Requests\BARequest;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BrandAmbassadorController extends Controller
 {
@@ -17,49 +19,12 @@ class BrandAmbassadorController extends Controller
     {
         $validated = $request->validated();
         BrandAmbassador::create($validated);
-        flash('Data kamu berhasil dikirim')->success();
+        flash('Data kamu berhasil dikirim!')->success();
         return redirect()->back();
     }
 
-    public function index(Request $request)
+    public function toExcel()
     {
-        $categories = Category::all();
-        return view('category.index', compact('categories'));
-    }
-
-    public function create(Request $request)
-    {
-        return view('category.create');
-    }
-
-    public function store(CategoryStoreRequest $request)
-    {
-        $category = Category::create($request->all());
-        $request->session()->flash('category', $category);
-        return redirect()->route('category');
-    }
-
-    public function update(Request $request, Category $category)
-    {
-        $category = Category::find($category);
-        return redirect()->route('category');
-    }
-
-    public function show(Request $request, Category $category)
-    {
-        $category = Category::find($category);
-        return view('category.show', compact('category'));
-    }
-
-    public function edit(Request $request, Category $category)
-    {
-        $category = Category::find($category);
-        return view('category.edit', compact('category'));
-    }
-
-    public function destroy(Request $request, Category $category)
-    {
-        Category::destroy($category->id);
-        return redirect()->route('category');
+        return Excel::download(new BAExport, 'Brand Ambassador.xlsx');
     }
 }

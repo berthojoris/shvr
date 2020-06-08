@@ -29,6 +29,7 @@ class BARequest extends FormRequest
             'email' => 'required|email|unique:brand_ambassadors',
             'phone' => 'required|numeric',
             'address' => 'required',
+            'province' => 'required|integer',
             'city' => 'required|integer',
             'postal_code' => 'required|numeric',
             'job' => 'required',
