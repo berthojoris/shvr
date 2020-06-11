@@ -12,7 +12,9 @@
 
                         <div class="form-group row">
                             <div class="col-md-12 text-center">
-                                <img src="{{ asset('images/shvr_logo.png') }}" width="400" alt="" srcset="">
+                                <a href="{{ route('ba_get') }}">
+                                    <img src="{{ asset('images/shvr_logo.png') }}" width="400" alt="" srcset="">
+                                </a>
                             </div>
                         </div>
 
@@ -21,7 +23,7 @@
                             <br>
                             <span>REGISTRATION FORM</span>
                         </div>
-                        
+
                         @include('flash::message')
 
                         <input type="hidden" name="config" id="config" value="ba">
