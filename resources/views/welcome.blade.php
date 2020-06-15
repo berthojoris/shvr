@@ -72,6 +72,7 @@
                     @else
                         <a class="nav-link" href="{{ route('ba_get') }}">BRAND AMBASSADOR REGISTRATION</a>
                         <a class="nav-link" href="{{ route('baToExcel') }}">BRAND AMBASSADOR DATA</a>
+                        <a class="nav-link" href="{{ route('comm_get') }}">COMMUNITY REGISTRATION</a>
                         {{-- <a href="{{ route('login') }}">Login</a>
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>

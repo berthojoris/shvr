@@ -8,11 +8,11 @@ class CommunityController extends Controller
 {
     public function register()
     {
-
+        return view('reg_comm');
     }
 
     public function save()
     {
-        
+
     }
 }
