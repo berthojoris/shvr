@@ -1,5 +1,10 @@
 @extends('layouts.register_layout')
 
+@push('custom_css')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+@endpush
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -336,4 +341,7 @@
         </div>
     </div>
 </div>
+<a href="{{ url('/') }}" class="float">
+    <i class="fa fa-arrow-left fa-lg my-float"></i>
+</a>
 @endsection

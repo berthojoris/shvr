@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <meta name="api-base-url" content="{{ url('/') }}" />
+    @stack('custom_css')
 </head>
 <body>
     <div id="app">
@@ -17,5 +18,6 @@
             @yield('content')
         </main>
     </div>
+    @stack('custom_js')
 </body>
 </html>
