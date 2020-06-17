@@ -34,7 +34,7 @@
                         <input type="hidden" name="config" id="config" value="ba">
 
                         <div class="form-group row">
-                            <label for="full_name" class="col-md-6 col-form-label text-md-left">Nama Lengkap</label>
+                            <label for="full_name" class="col-md-6 col-form-label text-md-left">Nama Lengkap <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <input id="full_name" type="text" class="form-control @error('full_name') is-invalid @enderror" name="full_name" value="{{ old('full_name') }}" required autocomplete="off">
                                 @error('full_name')
@@ -46,7 +46,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="instagram" class="col-md-6 col-form-label text-md-left">Instagram</label>
+                            <label for="instagram" class="col-md-6 col-form-label text-md-left">Instagram <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <input id="instagram" type="text" class="form-control @error('instagram') is-invalid @enderror" name="instagram" value="{{ old('instagram') }}" required autocomplete="off">
                                 @error('instagram')
@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-6 col-form-label text-md-left">Email</label>
+                            <label for="email" class="col-md-6 col-form-label text-md-left">Email <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="off">
                                 @error('email')
@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="phone" class="col-md-6 col-form-label text-md-left">HP / Telp</label>
+                            <label for="phone" class="col-md-6 col-form-label text-md-left">HP / Telp <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="off">
                                 @error('phone')
@@ -97,7 +97,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="address" class="col-md-6 col-form-label text-md-left">Alamat Lengkap</label>
+                            <label for="address" class="col-md-6 col-form-label text-md-left">Alamat Lengkap <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <textarea name="address" id="address" cols="30" rows="3" class="form-control @error('address') is-invalid @enderror" required></textarea>
                                 @error('address')
@@ -133,7 +133,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="postal_code" class="col-md-6 col-form-label text-md-left">Kode Pos</label>
+                            <label for="postal_code" class="col-md-6 col-form-label text-md-left">Kode Pos <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <input id="postal_code" type="number" class="form-control @error('postal_code') is-invalid @enderror" name="postal_code" value="{{ old('postal_code') }}" required autocomplete="off">
                                 @error('postal_code')
@@ -145,7 +145,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="job" class="col-md-6 col-form-label text-md-left">Pekerjaan</label>
+                            <label for="job" class="col-md-6 col-form-label text-md-left">Pekerjaan <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <input id="job" type="text" class="form-control @error('job') is-invalid @enderror" name="job" value="{{ old('job') }}" required autocomplete="off">
                                 @error('job')
@@ -157,7 +157,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="question_1" class="col-md-6 col-form-label text-md-left">Kamu mengetahui acara ini dari siapa?</label>
+                            <label for="question_1" class="col-md-6 col-form-label text-md-left">Kamu mengetahui acara ini dari siapa? <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <input id="question_1" type="text" class="form-control @error('question_1') is-invalid @enderror" name="question_1" value="{{ old('question_1') }}" required autocomplete="off">
                                 @error('question_1')
@@ -230,7 +230,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="question_6" class="col-md-6 col-form-label text-md-left">Berapa kali kamu biasanya hangout/party dalam sebulan</label>
+                            <label for="question_6" class="col-md-6 col-form-label text-md-left">Berapa kali kamu biasanya hangout/party dalam sebulan?</label>
                             <div class="col-md-6">
                                 <select name="question_6" id="question_6" class="form-control @error('question_6') is-invalid @enderror">
                                     <option value="1 Kali">1 Kali</option>
@@ -247,7 +247,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="question_7" class="col-md-6 col-form-label text-md-left">Sebutkan tempat hangout/party di kota kalian yg biasa kalian kunjungi</label>
+                            <label for="question_7" class="col-md-6 col-form-label text-md-left">Sebutkan tempat hangout/party di kota kalian yg biasa kalian kunjungi! <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <textarea name="question_7" id="question_7" cols="30" rows="3" class="form-control @error('question_7') is-invalid @enderror" required></textarea>
                                 @error('question_7')
@@ -259,7 +259,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="question_8" class="col-md-6 col-form-label text-md-left">Sebutkan 5 nama Local DJ favorit kalian</label>
+                            <label for="question_8" class="col-md-6 col-form-label text-md-left">Sebutkan 5 nama DJ Lokal favorit kalian! <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <textarea name="question_8" id="question_8" cols="30" rows="3" class="form-control @error('question_8') is-invalid @enderror" required></textarea>
                                 @error('question_8')
@@ -271,7 +271,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="question_9" class="col-md-6 col-form-label text-md-left">Sebutkan 5 nama International DJ favorit kalian</label>
+                            <label for="question_9" class="col-md-6 col-form-label text-md-left">Sebutkan 5 nama DJ International favorit kalian! <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <textarea name="question_9" id="question_9" cols="30" rows="3" class="form-control @error('question_9') is-invalid @enderror" required></textarea>
                                 @error('question_9')
@@ -283,7 +283,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="question_10" class="col-md-6 col-form-label text-md-left">Produk rokok apa yang kamu konsumsi sekarang ini?</label>
+                            <label for="question_10" class="col-md-6 col-form-label text-md-left">Produk rokok apa yang kamu konsumsi sekarang ini? <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <input id="question_10" type="text" class="form-control @error('question_10') is-invalid @enderror" name="question_10" value="{{ old('question_10') }}" required autocomplete="off">
                                 @error('question_10')
@@ -295,7 +295,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="question_11" class="col-md-6 col-form-label text-md-left">Tuliskan secara singkat profil diri kamu</label>
+                            <label for="question_11" class="col-md-6 col-form-label text-md-left">Tuliskan secara singkat profil diri kamu! <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <textarea name="question_11" id="question_11" cols="30" rows="3" class="form-control @error('question_11') is-invalid @enderror" required></textarea>
                                 @error('question_11')
@@ -307,7 +307,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="question_12" class="col-md-6 col-form-label text-md-left">Tuliskan secara singkat alasan kamu, kenapa kamu tertarik ingin menjadi brand ambassador GG SHVR</label>
+                            <label for="question_12" class="col-md-6 col-form-label text-md-left">Tuliskan secara singkat alasan kamu, kenapa kamu tertarik ingin menjadi brand ambassador GG SHVR! <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <textarea name="question_12" id="question_12" cols="30" rows="3" class="form-control @error('question_12') is-invalid @enderror" required></textarea>
                                 @error('question_12')
@@ -319,7 +319,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="question_13" class="col-md-6 col-form-label text-md-left">Kalau kamu terpilih sebagai brand ambassador GG SHVR, apa yang akan kamu lakukan untuk menaikan brand GG SHVR</label>
+                            <label for="question_13" class="col-md-6 col-form-label text-md-left">Kalau kamu terpilih sebagai brand ambassador GG SHVR, apa yang akan kamu lakukan untuk menaikan brand GG SHVR? <span class="required">*</span></label>
                             <div class="col-md-6">
                                 <textarea name="question_13" id="question_13" cols="30" rows="3" class="form-control @error('question_13') is-invalid @enderror" required></textarea>
                                 @error('question_13')

@@ -11,4 +11,9 @@ class CityController extends Controller
     {
         return City::where('province_id', $provinceId)->get();
     }
+
+    public function getCities()
+    {
+        return City::orderBy('name', 'asc')->get();
+    }
 }

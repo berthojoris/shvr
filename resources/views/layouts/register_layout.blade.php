@@ -11,6 +11,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <meta name="api-base-url" content="{{ url('/') }}" />
     @stack('custom_css')
+    @stack('custom_js')
+    <style>
+    .required {
+        color: red;
+    }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -18,6 +24,5 @@
             @yield('content')
         </main>
     </div>
-    @stack('custom_js')
 </body>
 </html>
