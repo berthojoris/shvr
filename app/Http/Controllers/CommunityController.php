@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Community;
+use App\Exports\CommExport;
 use Illuminate\Http\Request;
 use App\Http\Requests\CommRequest;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CommunityController extends Controller
 {
@@ -44,5 +46,10 @@ class CommunityController extends Controller
 
         flash('Data kamu berhasil dikirim!')->success();
         return redirect()->back();
+    }
+
+    public function toExcel()
+    {
+        return Excel::download(new CommExport, 'Community.xlsx');
     }
 }

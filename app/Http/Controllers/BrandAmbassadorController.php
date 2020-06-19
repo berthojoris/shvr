@@ -19,6 +19,7 @@ class BrandAmbassadorController extends Controller
     {
         $validated = $request->validated();
         BrandAmbassador::create($validated);
+
         flash('Data kamu berhasil dikirim!')->success();
         return redirect()->back();
     }
