@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>SHVR Testing</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -74,9 +74,9 @@
             <a href="{{ url('/home') }}">Home</a>
             @else
             <a class="nav-link" href="{{ route('ba_get') }}">BRAND AMBASSADOR REGISTRATION</a>
-            <a class="nav-link" href="{{ route('baToExcel') }}">BRAND AMBASSADOR DATA</a>
+            <a class="nav-link" href="{{ route('baToExcel') }}">BRAND AMBASSADOR (.xlsx)</a>
             <a class="nav-link" href="{{ route('comm_get') }}">COMMUNITY REGISTRATION</a>
-            <a class="nav-link" href="{{ route('commToExcel') }}">COMMUNITY DATA</a>
+            <a class="nav-link" href="{{ route('commToExcel') }}">COMMUNITY (.xlsx)</a>
             {{-- <a href="{{ route('login') }}">Login</a>
             @if (Route::has('register'))
             <a href="{{ route('register') }}">Register</a>
